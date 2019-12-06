@@ -1,0 +1,1090 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Results</title>
+  <style>
+    /* Standard styles */
+    body {
+      font-family: "Aial", sans-serif;
+      background-color: #EAF4F9;
+      color: black;
+      margin: 0;
+    }
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: bold;
+    }
+    p,
+    a,
+    table,
+    ul {
+      font-size: 12pt;
+    }
+    h4 {
+      font-size: 12pt;
+    }
+    h3 {
+      font-size: 14pt;
+    }
+    h2 {
+      font-size: 16pt;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    tt {
+      font-family: "Liberation Mono", monospace;
+    }
+    tt {
+      font-size: 10pt;
+    }
+    main {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    #histogram {
+      max-width: 620px;
+      margin-top: 30px;
+      border: 1px solid #36A9E0;
+    }
+    /* Table styling */
+    table {
+      width: 100%;
+      font-size: 12px;
+    }
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 5px;
+    }
+    th {
+      background: #B5DEF2;
+      font-size: 14px;
+      text-align: left;
+    }
+    td:first-child,
+    th:first-child {
+      border-right: 1px solid #36A9E0;
+    }
+    td:last-child,
+    th:last-child {
+      border-left: 1px solid #36A9E0;
+    }
+    td {
+      background: white;
+      padding: 8px 10px;
+    }
+    tr:not(:last-child) {
+      border-bottom: 1px solid #36A9E0;
+    }
+    /* Title wrapper */
+    .title-wrapper {
+      background: white;
+      padding: 5px 0;
+    }
+    .title-wrapper h1 {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #0577BD;
+    }
+    .title-wrapper h1>span {
+      color: #0D3C62;
+    }
+    /* Status wrapper */
+    .status-wrapper {
+      margin-top: 10px;
+    }
+    .status-wrapper td {
+      background: none;
+    }
+    .status-wrapper a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    /* Status styles */
+    .failed {
+      background: #F1596B;
+      color: white;
+      font-weight: bold;
+    }
+    /* Traffic Lights */
+    [class^='circle'] {
+      width: 66px;
+      height: 66px;
+      border: 2px solid white;
+      border-radius: 100%;
+      color: white;
+      text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 66px;
+    }
+    .circle__failed {
+      background: #F1596B;
+    }
+    .circle__failed:before {
+      content: '\002715'
+    }
+    .circle__warning {
+      background: #F6A623;
+    }
+    .circle__warning:before {
+      content: '\0021'
+    }
+    .circle__success {
+      background: #7ED321;
+    }
+    .circle__success:before {
+      content: '\002713'
+    }
+    .unsupported_dependency {
+      background-color: #F1596B;
+    }
+  </style>
+</head>
+<body>
+  <div class="title-wrapper">
+    <h1>Results from the script <span>'diffblue_check.py'</span></h1>
+  </div>
+  <main>
+    <table style="border:hidden" class="status-wrapper">
+      <tr style="border:hidden">
+        <td style="border:hidden" width="66px">
+           <div class="circle__warning"></div>
+        </td>
+        <td style="border:hidden">The automated generation of unit tests can be used for your Java application. However, due to some calls to unsupported library functions (32.9%) the coverage might not be as high as it usually is. See the section <a href="#java_app_statistics">Java Project Statistics</a> below.</td>
+      </tr>
+    </table>
+<p>2019-12-06 14:12:21</p>    <h2 id="java_app_summary">Java project summary</h2>
+    <table>
+      <col width="340">
+      <col width="140">
+      <col width="140">
+      <tr>
+        <th>Property</th>
+        <th>Value</th>
+        <th>Percentage</th>
+      </tr>
+      <tr>
+        <td>Number of lines of Java code</td>
+        <td>3667</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Methods that use multi-threading</td>
+        <td>20 / 605</td>
+        <td>3.31%</td>
+      </tr>
+      <tr>
+        <td>Methods that use JDK classes not modelled</td>
+        <td>131 / 605</td>
+        <td>21.65%</td>
+      </tr>
+      <tr>
+        <td>Methods that use lambdas</td>
+        <td>136 / 605</td>
+        <td>22.48%</td>
+      </tr>
+      <tr>
+        <td>Methods that use Spring</td>
+        <td>0 / 605</td>
+        <td>0.00%</td>
+      </tr>
+      <tr>
+        <td>Methods that use regex</td>
+        <td>1 / 605</td>
+        <td>0.17%</td>
+      </tr>
+      <tr>
+        <td>Methods that use reflection</td>
+        <td>6 / 605</td>
+        <td>0.99%</td>
+      </tr>
+      <tr>
+        <td>Lengthy methods (251+ bytecodes)</td>
+        <td>1 / 605</td>
+        <td>0.17%</td>
+      </tr>
+      <tr>
+        <td>Private methods</td>
+        <td>159 / 605</td>
+        <td>26.28%</td>
+      </tr>
+      <tr>
+        <td>Methods suggested for Diffblue Cover analysis</td>
+        <td>297 / 605</td>
+        <td>49.09%</td>
+      </tr>
+      <tr>
+        <td>Classes suggested for Diffblue Cover analysis</td>
+        <td>78 / 137</td>
+        <td>56.93%</td>
+      <tr>
+        <td>Bytecodes suggested for Diffblue Cover analysis</td>
+        <td>2720 / 9870</td>
+        <td>27.56%</td>
+      </tr>
+    </table>
+    <h2 id="suggested_classes">Largest classes suggested for analysis</h2>
+    <table>
+      <col width="40">
+      <col width="580">
+      <col width="80">
+      <tr>
+        <th>#</th>
+        <th>Class</th>
+        <th>Public Methods</th>
+      </tr>
+      <tr>
+        <td align="right">1</td>
+        <td>com/hepengju/java05/new02_varargs/_Varargs</td>
+        <td>100.00%</td>
+      </tr>
+      <tr>
+        <td align="right">2</td>
+        <td>com/hepengju/java06/new01_sciprtEngine/_ScriptEngine</td>
+        <td>100.00%</td>
+      </tr>
+      <tr>
+        <td align="right">3</td>
+        <td>com/hepengju/java05/new03_enhanceFor/_EnhanceFor</td>
+        <td>100.00%</td>
+      </tr>
+      <tr>
+        <td align="right">4</td>
+        <td>com/hepengju/java10/new01_varinference/_VarInference</td>
+        <td>100.00%</td>
+      </tr>
+      <tr>
+        <td align="right">5</td>
+        <td>com/hepengju/java05/new05_enum/WorkdayEnum</td>
+        <td>80.00%</td>
+      </tr>
+      <tr>
+        <td align="right">6</td>
+        <td>com/hepengju/java07/new03_switchString/_SwitchString</td>
+        <td>100.00%</td>
+      </tr>
+      <tr>
+        <td align="right">7</td>
+        <td>com/hepengju/java05/new06_generic/GenericMethodInClass</td>
+        <td>100.00%</td>
+      </tr>
+      <tr>
+        <td align="right">8</td>
+        <td>com/hepengju/java05/new01_autoboxing/_Autoboxing</td>
+        <td>100.00%</td>
+      </tr>
+      <tr>
+        <td align="right">9</td>
+        <td>com/hepengju/java09/new04_diamondoperator/_DiamondOperator</td>
+        <td>100.00%</td>
+      </tr>
+      <tr>
+        <td align="right">10</td>
+        <td>com/hepengju/java05/new05_enum/SpecialEnum</td>
+        <td>80.00%</td>
+      </tr>
+    </table>
+    <h2 id="not_suggested_classes">Largest classes not suggested for analysis</h2>
+    <table>
+      <col width="40">
+      <col width="480">
+      <col width="180">
+      <tr>
+        <th>#</th>
+        <th>Class</th>
+        <th>Negative Attributes</th>
+      </tr>
+      <tr>
+        <td align="right">1</td>
+        <td>com/hepengju/java08/new12_completableFuture/_CompletableFuture</td>
+        <td>unmodeled_JDK, threading, lambda, high_private_methods</td>
+      </tr>
+      <tr>
+        <td align="right">2</td>
+        <td>com/hepengju/java08/new07_collector/_Collector</td>
+        <td>unmodeled_JDK, lambda, high_private_methods</td>
+      </tr>
+      <tr>
+        <td align="right">3</td>
+        <td>com/hepengju/whynew/_01_JDBC</td>
+        <td>unmodeled_JDK, lambda</td>
+      </tr>
+      <tr>
+        <td align="right">4</td>
+        <td>com/hepengju/java09/new10_moneyAPI/_MoneyAPI</td>
+        <td>unmodeled_JDK, lambda</td>
+      </tr>
+      <tr>
+        <td align="right">5</td>
+        <td>com/hepengju/java08/new05_optional/_Optional</td>
+        <td>unmodeled_JDK, lambda, high_private_methods</td>
+      </tr>
+      <tr>
+        <td align="right">6</td>
+        <td>com/hepengju/java08/new04_streamAPI/_StreamAPI</td>
+        <td>regex, unmodeled_JDK, lambda, high_private_methods</td>
+      </tr>
+      <tr>
+        <td align="right">7</td>
+        <td>com/hepengju/java05/new06_generic/_Generic</td>
+        <td>reflection, unmodeled_JDK, lambda, high_private_methods</td>
+      </tr>
+      <tr>
+        <td align="right">8</td>
+        <td>com/hepengju/java08/new09_iostream/_IOStream</td>
+        <td>unmodeled_JDK, lambda</td>
+      </tr>
+      <tr>
+        <td align="right">9</td>
+        <td>com/hepengju/java05/new10_processBuilder/_ProcessBuilder</td>
+        <td>unmodeled_JDK, threading, lambda, high_private_methods</td>
+      </tr>
+      <tr>
+        <td align="right">10</td>
+        <td>com/hepengju/java08/new10_newDateTime/_NewDateTime</td>
+        <td>unmodeled_JDK, threading, lambda, high_private_methods</td>
+      </tr>
+    </table>
+    <h2 id="java_app_statistics">Java project statistics</h2>
+    <table>
+      <col width="340">
+      <col width="280">
+      <tr>
+        <th>Property</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Path to the checked Java application</td>
+        <td>.</td>
+      </tr>
+      <tr>
+        <td>Build system</td>
+        <td>Maven</td>
+      </tr>
+      <tr>
+        <td>Number of tests</td>
+        <td>181</td>
+      </tr>
+      <tr>
+        <td>Number of test files</td>
+        <td>57</td>
+      </tr>
+      <tr>
+        <td>Test framework(s)</td>
+        <td>JUnit</td>
+      </tr>
+      <tr>
+        <td>Number of lines of Java code</td>
+        <td>3667</td>
+      </tr>
+      <tr>
+        <td>Number of Java classes (excluding interfaces)</td>
+        <td>137</td>
+      </tr>
+      <tr>
+        <td>Number of methods in all classes</td>
+        <td>605</td>
+      </tr>
+      <tr>
+        <td>Number of synchronized methods in all classes</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Number of volatile elements in all classes</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Number of bytecodes in all methods</td>
+        <td>9870</td>
+      </tr>
+      <tr>
+        <td>Number of lambda uses in all methods</td>
+        <td>351</td>
+      </tr>
+      <tr>
+        <td>Number of loops in all methods</td>
+        <td>56</td>
+      </tr>
+      <tr>
+        <td>Number of synchronized blocks in all methods</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Number of calls to java.util.concurrent classes (atomic / locks / thread / remaining)</td>
+        <td>0 / 0 / 7 / 41</td>
+      </tr>
+      <tr>
+        <td>Number of calls to thread pool constructors (fixed / scheduled / fork_join)</td>
+        <td>2 / 0 / 0</td>
+      </tr>
+      <tr>
+        <td>Number of calls to object synchronizers (wait / timed wait / notify / notifyAll)</td>
+        <td>0 / 0 / 0 / 0</td>
+      </tr>
+      <tr>
+        <td>Number of calls to thread elements (start / sleep / interrupt / join)</td>
+        <td>1 / 1 / 1 / 0</td>
+      </tr>
+      <tr>
+        <td>Number of method calls within the Java application</td>
+        <td>342</td>
+      </tr>
+      <tr>
+        <td>Number of calls to the Java standard library</td>
+        <td>1554</td>
+      </tr>
+      <tr>
+        <td>Number of calls to other Java libraries</td>
+        <td>109</td>
+      </tr>
+      <tr>
+        <td>Total number of calls in the Java application</td>
+        <td>2005</td>
+      </tr>
+      <tr>
+        <td>Number of calls to supported Java Standard Library functions</td>
+        <td>1043</td>
+      </tr>
+      <tr>
+        <td>Number of calls to unsupported Java Standard Library functions</td>
+        <td>511</td>
+      </tr>
+      <tr>
+        <td>Estimated full analysis time (16 cores)</td>
+      <td>Between 8 and 26 computational hours.</td>
+      </tr>
+    </table>
+    <img id="histogram" src="data:image/png;base64,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CwAAALZUPaoeALZEbW2vBaP77kv+7u9e27ZqVdd9zz47+cIXki9+MTnwwK7blizpuvzKK8nzz7+2/N73dn3/7LMd71es6Pic2to3PtfrjwUAAIAtmSuw4G/00kvJc8+99nrppY1vf/nl5P3vT3r2fG3br3/ddd9f/7rrrYBNTRt/396ePPZY12Nf/6uDPXtu+AuHAAAAsKUSsGAz6tcvOfro15bvvfe1iNXevuGD4D/96Y2/TzqewbU+dv361x1Xgq139NEdnwUAAABbg5r2do9+ZtNqa2tLfX19WltbU1dXV/U4m92UKclnPvPa8o03Jqef/trywoXJ/vsnq1d3LG+/fXL44ckf/5g8+eRr+516avKDH3Q996mnJjff/NpyY2Py7ncns2a9dktjr14dD5ffZ59N950AAABKtq3/HbotcAUWbGb77JPccktHaEo6wtOdd3aNV//wD8l112147PXXd2xb78knO45dH69qazvOLV4BAACwNRGwoAInnJDMn5/80z8l73lPR8zq1y859NDku9/tuLWwT58Nj+vTp2Pbd7/bsW+/fh3Hvuc9Hed6/PGOcwMAAMDWRMDail122WWpqanJeeed17nulVdeSXNzcwYMGJAddtghJ554YpYtW9bluEWLFmXkyJHp3bt3Bg4cmAsuuCBr1qzZ3ONvsU4/vePZVOtfr7998PXe+97khhuSP/yh4xcFn38++cUvkjPPTLp3f+Pzd+/esc8vftFxzKpVHee44Qa/PAgAAMDWScDaSj3yyCP57ne/m6FDh3ZZP27cuNxxxx257bbbMnv27CxZsiQnvO6SnbVr12bkyJFZvXp1Hnroodx0002ZMmVKLrnkks39FQAAAACSCFhbpZdeeimnnHJKbrjhhrzrXe/qXN/a2prvfe97ueKKK/LRj340Bx10UG688cY89NBDefjhh5Mkd999d5588sncfPPN2X///TNixIh87WtfyzXXXJPV6586DgAAALAZCVhboebm5owcOTJHHHFEl/Vz587Nq6++2mX93nvvnV133TVz5sxJksyZMydDhgzJoEGDOvcZPnx42trasmDBgo1+3qpVq9LW1tblBQAAALCp9Kh6ADatW2+9Nb/+9a/zyCOPbLCtpaUlvXr1Sr9+/bqsHzRoUFpaWjr3eX28Wr99/baNmTRpUi699NJNMf5mN2rUA1WP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VgUWLlyYlStXJkkuvfTSvPTSSxVPBAAAAFCuHlUPsC3af//985nPfCaHHnpo2tvb881vfjM77LDDRve95JJLNvN0AAAAAGURsCowZcqUfOUrX8n06dNTU1OTO++8Mz16bPi/oqamRsACAAAAtnkCVgX22muv3HrrrUmSbt265d57783AgQMrngoAAACgTAJWxdatW1f1CAAAAABFE7AK8Mwzz+Tb3/52Fi5cmCRpbGzMueeem913373iyQAAAACq51cIKzZjxow0NjbmV7/6VYYOHZqhQ4fml7/8Zd73vvdl5syZVY8HAAAAUDlXYFXsS1/6UsaNG5fLLrtsg/UXXnhhPvaxj1U0GQAAAEAZXIFVsYULF2bMmDEbrP/sZz+bJ598soKJAAAAAMoiYFVsxx13zLx58zZYP2/ePL9MCAAAABC3EFbujDPOyJlnnpnf//73+eAHP5gkefDBB3P55Zdn/PjxFU8HAAAAUD0Bq2IXX3xx+vbtm29961uZMGFCkmTnnXfOV7/61ZxzzjkVTwcAAABQPQGrYjU1NRk3blzGjRuXF198MUnSt2/fiqcCAAAAKIdnYBWkb9++f1O8mjRpUg4++OD07ds3AwcOzKhRo/LUU0912eeVV15Jc3NzBgwYkB122CEnnnhili1b1mWfRYsWZeTIkendu3cGDhyYCy64IGvWrHnbcwEAAAD8LQSsrcjs2bPT3Nychx9+ODNnzsyrr76aI488MitXruzcZ9y4cbnjjjty2223Zfbs2VmyZElOOOGEzu1r167NyJEjs3r16jz00EO56aabMmXKlFxyySVVfCUAAACA1LS3t7dXPQTvjGeffTYDBw7M7Nmzc9hhh6W1tTU77rhjpk6dmpNOOilJ8pvf/Cb77LNP5syZk0MOOSR33nlnjj766CxZsiSDBg1Kklx//fW58MIL8+yzz6ZXr15/9XPb2tpSX1+f1tbW1NXVvaPf8W81atQDVY9QnGnTDq16BAAAgLdkS/o7lLfHFVhbsdbW1iRJ//79kyRz587Nq6++miOOOKJzn7333ju77rpr5syZkySZM2dOhgwZ0hmvkmT48OFpa2vLggULNuP0AAAAAB0ErAq9+uqrGTZsWH73u99t8nOvW7cu5513Xj70oQ9l3333TZK0tLSkV69e6devX5d9Bw0alJaWls59Xh+v1m9fv21jVq1alba2ti4vAAAAgE1FwKpQz5498/jjj78j525ubs4TTzyRW2+99R05/+tNmjQp9fX1na/Bgwe/458JAAAAbDsErIp9+tOfzve+971Nes6zzjor06dPz3333Zdddtmlc31DQ0NWr16dF154ocv+y5YtS0NDQ+c+f/6rhOuX1+/z5yZMmJDW1tbO1+LFizfl1wEAAAC2cT2qHmBbt2bNmnz/+9/PPffck4MOOih9+vTpsv2KK6540+dqb2/P2Wefndtvvz2zZs3Kbrvt1mX7QQcdlJ49e+bee+/NiSeemCR56qmnsmjRojQ1NSVJmpqa8vWvfz3Lly/PwIEDkyQzZ85MXV1dGhsbN/q5tbW1qa2tfdNzAgAAALwVAlbFnnjiiRx44IFJkt/+9rddttXU1LylczU3N2fq1Kn52c9+lr59+3Y+s6q+vj7bb7996uvrM2bMmIwfPz79+/dPXV1dzj777DQ1NeWQQw5Jkhx55JFpbGzMqaeemsmTJ6elpSUXXXRRmpubRSoAAACgEgJWxe67775Ndq7rrrsuSXL44Yd3WX/jjTfm9NNPT5JceeWV6datW0488cSsWrUqw4cPz7XXXtu5b/fu3TN9+vSMHTs2TU1N6dOnT0aPHp2JEydusjkBAAAA3oqa9vb29qqHIHn66afzzDPP5LDDDsv222+f9vb2t3wFVina2tpSX1+f1tbW1NXVVT3OXzRq1ANVj1CcadMOrXoEAACAt2RL+juUt8dD3Cv23HPPZdiwYXnve9+bo446KkuXLk2SjBkzJueff37F0wEAAABUT8Cq2Lhx49KzZ88sWrQovXv37lx/8skn56677qpwMgAAAIAyeAZWxe6+++7MmDEju+yyS5f1e+65Z/74xz9WNBUAAABAOVyBVbGVK1d2ufJqvRUrVvjVPwAAAIAIWJX78Ic/nB/84AedyzU1NVm3bl0mT56cj3zkIxVOBgAAAFAGtxBWbPLkyRk2bFgeffTRrF69Ol/84hezYMGCrFixIg8++GDV4wEAAABUzhVYFdt3333z29/+NoceemiOO+64rFy5MieccEIee+yx7L777lWPBwAAAFA5V2AVoL6+Pl/+8perHgMAAACgSAJWAZ5//vl873vfy8KFC5MkjY2N+cxnPpP+/ftXPBkAAABA9dxCWLH7778/73nPe3L11Vfn+eefz/PPP5+rr746u+22W+6///6qxwMAAAConCuwKtbc3JyTTz451113Xbp3754kWbt2bT7/+c+nubk58+fPr3hCAAAAgGq5AqtiTz/9dM4///zOeJUk3bt3z/jx4/P0009XOBkAAABAGQSsih144IGdz756vYULF2a//farYCIAAACAsriFsAKPP/545/tzzjkn5557bp5++ukccsghSZKHH34411xzTS677LKqRgQAAAAoRk17e3t71UNsa7p165aampr8tf/0NTU1Wbt27WaaatNpa2tLfX19WltbU1dXV/U4f9GoUQ9UPUJxpk07tOoRAAAA3pIt6e9Q3h5XYFXgD3/4Q9UjAAAAAGwxBKwKvPvd7656BAAAAIAthoBVgCVLluSBBx7I8uXLs27dui7bzjnnnIqmAgAAACiDgFWxKVOm5J//+Z/Tq1evDBgwIDU1NZ3bampqBCwAAABgmydgVeziiy/OJZdckgkTJqRbt25VjwMAAABQHMWkYi+//HL+8R//UbwCAAAAeAOqScXGjBmT2267reoxAAAAAIrlFsKKTZo0KUcffXTuuuuuDBkyJD179uyy/YorrqhoMgAAAIAyCFgVmzRpUmbMmJG99torSTZ4iDsAAADAtk7Aqti3vvWtfP/738/pp59e9SgAAAAARfIMrIrV1tbmQx/6UNVjAAAAABRLwKrYueeem+985ztVjwEAAABQLLcQVuxXv/pVfv7zn2f69Ol53/vet8FD3H/6059WNBkAAABAGQSsivXr1y8nnHBC1WMAAAAAFEvAqtiNN95Y9QgAAAAARfMMLAAAAACK5gqsiu22226pqal5w+2///3vN+M0AAAAAOURsCp23nnndVl+9dVX89hjj+Wuu+7KBRdcUNFUAAAAAOUQsCp27rnnbnT9Nddck0cffXQzTwMAAABQHs/AKtSIESPyH//xH1WPAQAAAFA5AatQP/nJT9K/f/+qxwAAAAConFsIK3bAAQd0eYh7e3t7Wlpa8uyzz+baa6+tcDIAAACAMghYFRs1alSX5W7dumXHHXfM4Ycfnr333ruiqQAAAADKIWBV7Ctf+UrVIwAAAAAUzTOwAAAAACiaK7Aq0q1bty7PvtqYmpqarFmzZjNNBAAAAFAmAasit99++xtumzNnTq6++uqsW7duM04EAAAAUCYBqyLHHXfcBuueeuqpfOlLX8odd9yRU045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nrDqU5TPA6A8IYEFlLDly5dr1KhRiouL0549e9S0aVNFR0dbLuDzk56ergcffFDDhg3Ltz0zM1PdunVTenq6/vvf/2rx4sVatGiRXnrpJVudht1dunRJTZs21Zw5cwpsb9eunaZNm1bkY+7fv19ZWVmaP3++fv75Z82cOVPz5s3T888/b+mTkpKirl27KjQ0VLt379arr76qCRMm6O23377pc7K3LVu2aPjw4dq+fbsSEhKUkZGhrl276tKlS5Y+ly9fVkxMjNWYFMbV1VU9evTQJ598ov/9739atGiRvvrqK6uLsCNHjqhbt27q1KmTEhMTNXLkSD366KNat25diZ6jvdSsWVNTp07V7t279d133+nuu+9Wjx499PPPP0sq3rjmNmTIEDVp0iRPvbOPa267du3S/Pnz84zDzYxtfHy8Tp06Zdly/wHr7GPbqFEjq3P/5ptvLG3FGdPevXtbHe/UqVOKjo5Wx44dFRAQYNX3wIEDVv2ubS8rdu3aZXUeCQkJkqQHH3xQkpm8iomJUdeuXbVz507t2rVLI0aMkKtr4ZffgwcPVu/evfNtK8r31H//+1/17dtXQ4YM0ffff6+ePXuqZ8+e+umnn0rgzEtWYd/306dP1+zZszVv3jzt2LFDlSpVUnR0tK5cuWLpU9h1VH4yMzPl7e2tp556Sl26dLlu3+u9Z4tz3VdaChtbSYqJibE6tw8++MCqvThj+9///ldNmjTRypUr9eOPP2rQoEF65JFH9Nlnn1n18/HxsfrZx44ds2ovyu/eURXlmkuShg4dajUG+SWjr/d5cK1FixYpKiqqJE4BcEwGgBLVunVrY/jw4ZZyZmamERISYkyZMqXQfePj4w1fX9889V988YXh6upqJCUlWereeustw8fHx0hLSyuZwB2YJGP16tX5th05csSQZHz//ffFOvb06dONunXrWspz5841qlatajWuzz33nBEWFlas4zuy06dPG5KMLVu25GnbtGmTIcn4888/i3XsWbNmGTVr1rSUx44dazRq1MiqT+/evY3o6OhiHb8sqFq1qrFgwQKruuKM69y5c42OHTsaGzZsyLNveRnXixcvGrfddpuRkJBgdOzY0Xj66afz9LnRsb3e54phOPfYxsXFGU2bNi203818Dpw+fdqoUKGC8e6775bI8cqCp59+2qhXr56RlZVlGIZhREREGC+++GKxj1fQ76ko31MPPfSQ0a1bN6v9IiIijMcff7zY8ZSGa/+/zMrKMoKCgoxXX33VUnf+/HnD09PT+OCDD/LsX9B1VGEGDBhg9OjRI099Ud6zN3PdV5ry+8wr6LzzU9yxzXbvvfcagwYNKvLxbvR37+jyu+Yq6PssP0X93I6Pjzc6duxY3DABh8cMLKAEpaena/fu3Vb/kufq6qouXbpo27ZtxT7utm3b1LhxYwUGBlrqoqOjlZKSYpnhgeK5cOGC/P39LeVt27apQ4cO8vDwsNRFR0frwIED+vPPP+0Ros1cuHBBkqzOvyScPHlSq1atUseOHS1127Zty/Mv3NHR0Tf1/4WjyszM1LJly3Tp0iVFRkbe1LF++eUXTZo0Se+++26+szbKy7gOHz5c3bp1K3SWRHGOW716dbVu3VoLFy6UYRiWNmcf24MHDyokJES33nqr+vfvr+PHj5fo8d99911VrFhRDzzwQJ62Zs2aKTg4WPfcc4++/fbbEv259pKenq73339fgwcPttw2uWPHDgUEBKht27YKDAxUx44drWa6FVdRvqec5f175MgRJSUlWZ2Lr6+vIiIiSvVcCnrP2uq6rzRt3rxZAQEBCgsL07Bhw3T27Fmb/Jxrr7ckKTU1VaGhoapVq5bVrGXJcX73JaWga64lS5aoevXquuOOOzRu3DhdvnzZHuEBZQYJLKAEnTlzRpmZmVaJJkkKDAy8qTU+kpKS8j1mdhuK59ChQ3rzzTf1+OOPW+rKy1hnZWVp5MiRuuuuu3THHXeUyDH79u2rihUr6pZbbpGPj48WLFhgaStoXFNSUgpdD6as2Lt3rypXrixPT0898cQTWr16tRo2bFjs46Wlpalv37569dVXVbt27Xz7lIdxXbZsmfbs2aMpU6aU6HEnTZqkFStWKCEhQb169dI///lPvfnmm5Z2Zx7biIgILVq0SGvXrtVbb72lI0eOqH379rp48WKJ/Yz//Oc/6tevn7y9vS11wcHBmjdvnlauXKmVK1eqVq1aioqK0p49e0rs59rLmjVrdP78eQ0cOFCS9Ouvv0oy1xsbOnSo1q5dqxYtWqhz5843vYZPUb6nCupT1r7HsuO117kU9p611XVfaYmJidG7776rDRs2aNq0adqyZYtiY2OVmZlZoj9nxYoV2rVrlwYNGmSpCwsL08KFC/Xxxx/r/fffV1ZWltq2bavffvtNkv1/9yWpoGuufv366f3339emTZs0btw4vffee/rHP/5hx0gBx+du7wCA8uSJJ57Q+++/bymnpqbaMRrnVthY//7774qJidGDDz6ooUOHlnZ4djd8+HD99NNPNzwbIDY2Vl9//bUkKTQ01OpfS2fOnKm4uDj973//07hx4zRq1CjNnTu3RON2ZGFhYUpMTNSFCxf00UcfacCAAdqyZUuRklj5jeu4ceMUHh5eri9mT5w4oaeffloJCQl5FvctqoLes+PHj7f0ad68uS5duqRXX31VTz311M0H7uBiY2Mtr5s0aaKIiAiFhoZqxYoVGjJkSJH2L+hzQDJn/+zbt0/vvfeeVX1YWJjCwsIs5bZt2+rw4cOaOXNmnr5lzX/+8x/FxsYqJCREkvkHqyQ9/vjjlj/amzdvrg0bNmjhwoWaMmVKoeOIktOoUSPL+krt27e3esjG9Tjze1aS+vTpY3nduHFjNWnSRPXq1dPmzZvVuXPnIh2jsLHdtGmTBg0apHfeeUeNGjWy1EdGRlrNUm7btq3Cw8M1f/58TZ48+WZOy+EUdM312GOPWV43btxYwcHB6ty5sw4fPqx69eoV6djHjx+3us64evWqMjIyVLlyZUvd888/X+w1OAFHQwILKEHVq1eXm5ubkpOTreqTk5MVFBSkSZMmafTo0Td83KCgoDxPtMn+GUFBQcUP2Ildb6xPnjypTp06qW3btnkWZw8KCsr395fd5gxGjBihzz77TFu3blXNmjVvaN8FCxZYZp9UqFDBqi0oKEhBQUFq0KCB/P391b59e40fP17BwcEFjquPj4/VDI2yzMPDQ/Xr15cktWzZUrt27dKsWbM0f/78QvfNb1w3btyovXv36qOPPpIky+1t1atX1wsvvKCJEyc6/bju3r1bp0+fVosWLSx1mZmZ2rp1q/79738rLS1Nbm5u1z3G9d6zuUVERGjy5MlKS0uTp6en049tbn5+frr99tt16NChIvUvbEwXLFigZs2aqWXLloUeq3Xr1iVyW509HTt2TF999ZVWrVplqQsODpakPAns8PBwy+2aRX1vXqso31MF9Slr32PZ8SYnJ1vGNLt8I09k++KLL5SRkSFJN/3/b+73bGHXfWXNrbfequrVq+vQoUNFTmBdb2y3bNmi7t27a+bMmXrkkUeue5wKFSqoefPmls+hkvrd29uNXHNFRERIMu8QKGoCKyQkxOpJ3KtWrdLKlSutnvpY0ktFAPZEAgsoQR4eHmrZsqU2bNhgeZpVVlaWNmzYoBEjRiggIKBYT1uKjIzUyy+/rNOnT1v2T0hIkI+Pz03douTMChrr33//XZ06dVLLli0VHx+fZ12hyMhIvfDCC8rIyLD8QZGQkKCwsDBVrVq1VGK3FcMw9OSTT2r16tXavHmz6tate8PHuOWWW4rUL3v2QVpamiRzXK99hHtCQsJNrxHlyLKysiznX5j8xnXlypVWt6rt2rVLgwcP1tdff225sHX2ce3cubP27t1rVTdo0CA1aNBAzz33XKHJK6no79nExERVrVpVnp6ekpx/bHNLTU3V4cOH9fDDDxep//XGNDU1VStWrCjyLZ+JiYlWf5yWRfHx8QoICFC3bt0sdXXq1FFISIgOHDhg1fd///ufZQZcUd+b1yrK91RkZKQ2bNigkSNHWvYri+/funXrKigoSBs2bLAkLVJSUrRjx44beipeaGhoicWU+z1b2HVfWfPbb7/p7NmzN/T/ZEFju3nzZt13332aNm2a1UyjgmRmZmrv3r269957JZXctbbQRQAAEdhJREFU795einPNlZ2IupHxd3d3t/zjmWRe/3p7e1vVAc6EBBZQwkaNGqUBAwaoVatWat26td544w1dunTJ6r7/ax0/flznzp3T8ePHlZmZafkCq1+/vipXrqyuXbuqYcOGevjhhzV9+nQlJSXpxRdf1PDhwy1/bDmb1NRUq9kAR44cUWJiovz9/VW7dm3LeJ08eVKSLH8kZM8Cys/vv/+uqKgohYaGasaMGfrjjz8sbdn79OvXTxMnTtSQIUP03HPP6aefftKsWbM0c+ZMW51qqRk+fLiWLl2qjz/+WFWqVLGsIeHr62v5V9OkpCQlJSVZxn7v3r2qUqWKateuXeC/4H3xxRdKTk7WnXfeqcqVK+vnn3/WmDFjdNddd6lOnTqSzFs6//3vf2vs2LEaPHiwNm7cqBUrVujzzz+3/YmXgnHjxik2Nla1a9fWxYsXtXTpUm3evFnr1q2TVLxxvfZfX8+cOSPJnMHh5+cnyfnHtUqVKnnWaKtUqZKqVatmqS/O2H766adKTk5WmzZt5OXlpYSEBL3yyitWszadeWxHjx6t7t27KzQ0VCdPnlRcXJzc3NzUt29fScUb02zLly/X1atX87319Y033lDdunXVqFEjXblyRQsWLNDGjRu1fv36kj/JUpKVlaX4+HgNGDBA7u45l9UuLi4aM2aM4uLi1LRpUzVr1kyLFy/W/v37LbMqC3Lo0CGlpqYqKSlJf/31l+WaoGHDhvLw8CjS99TTTz+tjh076rXXXlO3bt20bNkyfffdd3lmHTuCwr7vR44cqX/961+67bbbVLduXY0fP14hISGWhJFU+HVUQX755Relp6fr3LlzunjxomW/7IRJUd6zxbnuKy3XG1t/f39NnDhRvXr1UlBQkA4fPqyxY8eqfv36io6OtuxTnLHdtGmT7rvvPj399NPq1auX5XrDw8PD8hkyadIktWnTRvXr19f58+f16quv6tixY3r00Uclmf8PFeV376gKu+Y6fPiwli5dqnvvvVfVqlXTjz/+qGeeeUYdOnRQkyZNLMcp7PMAKHfs+xBEwDm9+eabRu3atQ0PDw+jdevWxvbt26/bf8CAAYakPNumTZssfY4ePWrExsYa3t7eRvXq1Y1nn33WyMjIsPGZ2E/2o6uv3QYMGGAYhvmY4Pza4+LiCjxmQftc+1H4ww8/GO3atTM8PT2NW265xZg6daoNz7T0FHTu8fHxlj5xcXGF9rnWxo0bjcjISMPX19fw8vIybrvtNuO5557L89jxTZs2Gc2aNTM8PDyMW2+99brHLGsGDx5shIaGGh4eHkaNGjWMzp07G+vXr7e0F2dcr1XQ49ydeVzzc+1jx4sztl9++aXRrFkzo3LlykalSpWMpk2bGvPmzTMyMzOt+jnr2Pbu3dsIDg42PDw8jFtuucXo3bu3cejQIUv7zbxfIyMjjX79+uXbNm3aNKNevXqGl5eX4e/vb0RFRRkbN24sqdOyi3Xr1hmSjAMHDuTbPmXKFKNmzZpGxYoVjcjISOPrr78u9JgdO3bMd/yPHDli6VOU76kVK1YYt99+u+Hh4WE0atTI+Pzzz4t9nrZU2Pd9VlaWMX78eCMwMNDw9PQ0OnfunGe8i3IdlZ/Q0NDrXhMU9T17o9d9peV6Y3v58mWja9euRo0aNYwKFSoYoaGhxtChQ42kpCSrYxRnbAvap2PHjpY+I0eOtIxZYGCgce+99xp79uyxOk5RfveOqrBrruPHjxsdOnQw/P39DU9PT6N+/frGmDFjjAsXLlgdpyifB7nFx8dbjTPgbFwMI9czowEAAAAAAAAH41p4FwAAAAAAAMB+SGABAAAAAADAoZHAAgAAAAAAgEMjgQUAAAAAAACHRgILAAAAAAAADo0EFgAAAAAAABwaCSwAAAAAAAA4NBJYAACgXDh69KhcXFyUmJho71As9u/frzZt2sjLy0vNmjXLt09UVJRGjhxZypHZzoQJEwo8VwAAgIKQwAIAAKVi4MCBcnFx0dSpU63q16xZIxcXFztFZV9xcXGqVKmSDhw4oA0bNtjs5wwcOFA9e/a02fEBAABsjQQWAAAoNV5eXpo2bZr+/PNPe4dSYtLT04u97+HDh9WuXTuFhoaqWrVqJRgVAACAcyGBBQAASk2XLl0UFBSkKVOmFNgnv1vM3njjDdWpU8dSzp5R9MorrygwMFB+fn6aNGmSrl69qjFjxsjf3181a9ZUfHx8nuPv379fbdu2lZeXl+644w5t2bLFqv2nn35SbGysKleurMDAQD388MM6c+aMpT0qKkojRozQyJEjVb16dUVHR+d7HllZWZo0aZJq1qwpT09PNWvWTGvXrrW0u7i4aPfu3Zo0aZJcXFw0YcKEAsfk6tWrGjFihHx9fVW9enWNHz9ehmFIkiZNmqQ77rgjzz7NmjXT+PHjNWHCBC1evFgff/yxXFxc5OLios2bN0uSTpw4oYceekh+fn7y9/dXjx49dPToUavjLFy4UI0aNZKnp6eCg4M1YsQIS9vx48fVo0cPVa5cWT4+PnrooYeUnJxstf/UqVMVGBioKlWqaMiQIbpy5UqeWBcsWKDw8HB5eXmpQYMGmjt3rqUtPT1dI0aMUHBwsLy8vBQaGnrd9w8AAHBOJLAAAECpcXNz0yuvvKI333xTv/32200da+PGjTp58qS2bt2q119/XXFxcbrvvvtUtWpV7dixQ0888YQef/zxPD9nzJgxevbZZ/X9998rMjJS3bt319mzZyVJ58+f1913363mzZvru+++09q1a5WcnKyHHnrI6hiLFy+Wh4eHvv32W82bNy/f+GbNmqXXXntNM2bM0I8//qjo6Gj97W9/08GDByVJp06dUqNGjfTss8/q1KlTGj16dIHnunjxYrm7u2vnzp2aNWuWXn/9dS1YsECSNHjwYO3bt0+7du2y9P/+++/1448/atCgQRo9erQeeughxcTE6NSpUzp16pTatm2rjIwMRUdHq0qVKvr666/17bffqnLlyoqJibHMKnvrrbc0fPhwPfbYY9q7d68++eQT1a9fX5KZoOvRo4fOnTunLVu2KCEhQb/++qt69+5tiWPFihWaMGGCXnnlFX333XcKDg62Sk5J0pIlS/TSSy/p5Zdf1r59+/TKK69o/PjxWrx4sSRp9uzZ+uSTT7RixQodOHBAS5YssUpmAgCAcsIAAAAoBQMGDDB69OhhGIZhtGnTxhg8eLBhGIaxevVqI/clSVxcnNG0aVOrfWfOnGmEhoZaHSs0NNTIzMy01IWFhRnt27e3lK9evWpUqlTJ+OCDDwzDMIwjR44YkoypU6da+mRkZBg1a9Y0pk2bZhiGYUyePNno2rWr1c8+ceKEIck4cOCAYRiG0bFjR6N58+aFnm9ISIjx8ssvW9Xdeeedxj//+U9LuWnTpkZcXNx1j9OxY0cjPDzcyMrKstQ999xzRnh4uKUcGxtrDBs2zFJ+8sknjaioKEs599hne++994ywsDCr46alpRne3t7GunXrLOfwwgsv5BvX+vXrDTc3N+P48eOWup9//tmQZOzcudMwDMOIjIy0Ol/DMIyIiAir32+9evWMpUuXWvWZPHmyERkZaTmXu+++2ypOAABQ/jADCwAAlLpp06Zp8eLF2rdvX7GP0ahRI7m65lzKBAYGqnHjxpaym5ubqlWrptOnT1vtFxkZaXnt7u6uVq1aWeL44YcftGnTJlWuXNmyNWjQQJK5XlW2li1bXje2lJQUnTx5UnfddZdV/V133VWsc27Tpo3VQveRkZE6ePCgMjMzJUlDhw7VBx98oCtXrig9PV1Lly7V4MGDr3vMH374QYcOHVKVKlUs5+rv768rV67o8OHDOn36tE6ePKnOnTvnu/++fftUq1Yt1apVy1LXsGFD+fn5Wc5x3759ioiIsNov9/hfunRJhw8f1pAhQ6zG/F//+pdlvAcOHKjExESFhYXpqaee0vr1629g5AAAgLNwt3cAAACg/OnQoYOio6M1btw4DRw40KrN1dXVsr5TtoyMjDzHqFChglXZxcUl37qsrKwix5Wamqru3btr2rRpedqCg4MtrytVqlTkY5aG7t27y9PTU6tXr5aHh4cyMjL0wAMPXHef1NRUtWzZUkuWLMnTVqNGDavkoK2kpqZKkt555508iS43NzdJUosWLXTkyBF9+eWX+uqrr/TQQw+pS5cu+uijj2weHwAAcBwksAAAgF1MnTpVzZo1U1hYmFV9jRo1lJSUJMMwLLOOEhMTS+znbt++XR06dJBkLo6+e/duy8LkLVq00MqVK1WnTh25uxf/MsnHx0chISH69ttv1bFjR0v9t99+q9atW9/w8Xbs2JHnHG677TZLksfd3V0DBgxQfHy8PDw81KdPH3l7e1v6e3h4WGZrZWvRooWWL1+ugIAA+fj45Ptz69Spow0bNqhTp0552sLDw3XixAmdOHHCMgvrl19+0fnz59WwYUNLnx07duiRRx6xij1bYGCgQkJC9Ouvv6p///4Fnr+Pj4969+6t3r1764EHHlBMTIzOnTsnf3//AvcBAADOhQQWAACwi8aNG6t///6aPXu2VX1UVJT++OMPTZ8+XQ888IDWrl2rL7/8ssAky42aM2eObrvtNoWHh2vmzJn6888/LbfbDR8+XO+884769u2rsWPHyt/fX4cOHdKyZcu0YMECS8KoKMaMGaO4uDjVq1dPzZo1U3x8vBITE/Od8VSY48ePa9SoUXr88ce1Z88evfnmm3rttdes+jz66KMKDw+XZCbKcqtTp47WrVunAwcOqFq1avL19VX//v316quvqkePHpanJR47dkyrVq3S2LFjVbNmTU2YMEFPPPGEAgICFBsbq4sXL/5/e/cPklUfxnH4a6MgKpjUIiQ8qMSDhI8NCrlINDS5uPkHU1BR4wnaGnISh3DRQQRdgqIph2gWXaS1XTehobECxTahN3hBkNefL9c1Hzg352wfzv07OTg4yMLCQoaHhy/e4draWk5PTzM3N5ehoaHUarUkydLSUiYmJlKr1TI4OJi3b9/m69ev6ezsvJjt9evXWVxcTHNzc548eZJfv37ly5cv+f79e+r1et68eZO7d+/mwYMHuXXrVj58+JA7d+6kpaXl0s8RALi5nIEFAFyb5eXlv1b8enp6srGxkfX19fT29ubw8PBf/9B3WSsrK1lZWUlvb2/29/ezu7ubtra2JLn4aurs7CyPHz9OtVrN8+fP09LScumVusXFxdTr9bx48SLVajWfP3/O7u5uKpXKpWceGxvLjx8/8vDhw8zPz2dpaSkzMzN/XFOpVDIwMJDu7u6/1vGmp6fT1dWVWq2W27dv5+DgII2Njdnb20tHR0dGRkbS09OTqamp/Pz58yIWjo+PZ21tLRsbG7l//36ePn168RfFhoaGfPz4Ma2trXn06FGGh4fT2dmZ9+/fX9x3dHQ0r169ysuXL9PX15fj4+PMzs7+MduzZ8+ytbWV7e3tVKvVDA0NZWdnJ/fu3UuSNDU1ZXV1NbVaLf39/Tk6OsqnT5/+kxVHAKAcDef/PGQCAIAb5/z8PJVKJXNzc6nX69c9DgDAlbJCCABww3379i3v3r3LyclJJicnr3scAIArJ2ABANxw7e3taWtry+bmZlpbW697HACAKydgAQDccE6EAAD+75x+CQAAAEDRBCwAAAAAiiZgAQAAAFA0AQsAAACAoglYAAAAABRNwAIAAACgaAIWAAAAAEUTsAAAAAAomoAFAAAAQNEELAAAAACKJmABAAAAUDQBCwAAAICiCVgAAAAAFE3AAgAAAKBoAhYAAAAARROwAAAAACiagAUAAABA0QQsAAAAAIomYAEAAABQNAELAAAAgKIJWAAAAAAUTcACAAAAoGgCFgAAAABFE7AAAAAAKJqABQAAAEDRBCwAAAAAiiZgAQAAAFA0AQsAAACAoglYAAAAABRNwAIAAACgaAIWAAAAAEUTsAAAAAAomoAFAAAAQNEELAAAAACKJmABAAAAUDQBCwAAAICiCVgAAAAAFE3AAgAAAKBoAhYAAAAARROwAAAAACiagAUAAABA0QQsAAAAAIomYAEAAABQNAELAAAAgKL9BoeUAKhRvdH1AAAAAElFTkSuQmCC">    <h2 id="non_modelled_library_calls">Calls to unsupported library functions</h2>
+    <table>
+      <col width="60">
+      <col width="660">
+      <col width="60">
+      <tr>
+        <th>#</th>
+        <th>Method name</th>
+        <th>#calls</th>
+      </tr>
+      <tr>
+        <td align="right">1</td>
+        <td>java/lang/Throwable.addSuppressed:(Ljava/lang/Throwable;)V</td>
+        <td align="right">25</td>
+      </tr>
+      <tr>
+        <td align="right">2</td>
+        <td>java/sql/SQLException.printStackTrace:()V</td>
+        <td align="right">25</td>
+      </tr>
+      <tr>
+        <td align="right">3</td>
+        <td>java/util/concurrent/CompletableFuture.completedFuture:(Ljava/lang/Object;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">25</td>
+      </tr>
+      <tr>
+        <td align="right">4</td>
+        <td>java/util/stream/Collectors.toList:()Ljava/util/stream/Collector;</td>
+        <td align="right">21</td>
+      </tr>
+      <tr>
+        <td align="right">5</td>
+        <td>java/util/concurrent/CompletableFuture.join:()Ljava/lang/Object;</td>
+        <td align="right">14</td>
+      </tr>
+      <tr>
+        <td align="right">6</td>
+        <td>java/time/Instant.now:()Ljava/time/Instant;</td>
+        <td align="right">13</td>
+      </tr>
+      <tr>
+        <td align="right">7</td>
+        <td>java/util/concurrent/CompletableFuture.thenApply:(Ljava/util/function/Function;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">13</td>
+      </tr>
+      <tr>
+        <td align="right">8</td>
+        <td>java/io/IOException.printStackTrace:()V</td>
+        <td align="right">11</td>
+      </tr>
+      <tr>
+        <td align="right">9</td>
+        <td>java/util/concurrent/CompletableFuture.thenApplyAsync:(Ljava/util/function/Function;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">10</td>
+      </tr>
+      <tr>
+        <td align="right">10</td>
+        <td>java/util/Optional.map:(Ljava/util/function/Function;)Ljava/util/Optional;</td>
+        <td align="right">9</td>
+      </tr>
+      <tr>
+        <td align="right">11</td>
+        <td>java/lang/Thread."&lt;init&gt;":(Ljava/lang/Runnable;)V</td>
+        <td align="right">8</td>
+      </tr>
+      <tr>
+        <td align="right">12</td>
+        <td>java/lang/Thread.start:()V</td>
+        <td align="right">8</td>
+      </tr>
+      <tr>
+        <td align="right">13</td>
+        <td>java/sql/DriverManager.getConnection:(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/sql/Connection;</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">14</td>
+        <td>java/util/Arrays.toString:([Ljava/lang/Object;)Ljava/lang/String;</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">15</td>
+        <td>java/util/Optional.flatMap:(Ljava/util/function/Function;)Ljava/util/Optional;</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">16</td>
+        <td>java/util/concurrent/CompletableFuture.getNow:(Ljava/lang/Object;)Ljava/lang/Object;</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">17</td>
+        <td>java/lang/Class.isAnnotationPresent:(Ljava/lang/Class;)Z</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">18</td>
+        <td>java/lang/Thread.currentThread:()Ljava/lang/Thread;</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">19</td>
+        <td>java/time/Duration.between:(Ljava/time/temporal/Temporal;Ljava/time/temporal/Temporal;)Ljava/time/Duration;</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">20</td>
+        <td>java/time/LocalDate.with:(Ljava/time/temporal/TemporalAdjuster;)Ljava/time/LocalDate;</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">21</td>
+        <td>java/util/stream/Collectors.mapping:(Ljava/util/function/Function;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">22</td>
+        <td>java/lang/Class.getDeclaredMethod:(Ljava/lang/String;[Ljava/lang/Class;)Ljava/lang/reflect/Method;</td>
+        <td align="right">5</td>
+      </tr>
+      <tr>
+        <td align="right">23</td>
+        <td>java/lang/Thread.sleep:(J)V</td>
+        <td align="right">5</td>
+      </tr>
+      <tr>
+        <td align="right">24</td>
+        <td>java/lang/InterruptedException.printStackTrace:()V</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">25</td>
+        <td>java/lang/Thread.isDaemon:()Z</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">26</td>
+        <td>java/lang/reflect/Method.getAnnotationsByType:(Ljava/lang/Class;)[Ljava/lang/annotation/Annotation;</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">27</td>
+        <td>java/time/Duration.toMillis:()J</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">28</td>
+        <td>java/time/LocalDate.now:()Ljava/time/LocalDate;</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">29</td>
+        <td>java/util/Optional.isEmpty:()Z</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">30</td>
+        <td>java/lang/Runtime.getRuntime:()Ljava/lang/Runtime;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">31</td>
+        <td>java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">32</td>
+        <td>java/net/http/HttpClient.newHttpClient:()Ljava/net/http/HttpClient;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">33</td>
+        <td>java/net/http/HttpRequest.newBuilder:(Ljava/net/URI;)Ljava/net/http/HttpRequest$Builder;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">34</td>
+        <td>java/net/http/HttpResponse$BodyHandlers.ofString:()Ljava/net/http/HttpResponse$BodyHandler;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">35</td>
+        <td>java/util/Optional.filter:(Ljava/util/function/Predicate;)Ljava/util/Optional;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">36</td>
+        <td>java/util/Optional.stream:()Ljava/util/stream/Stream;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">37</td>
+        <td>java/util/concurrent/CompletableFuture.allOf:([Ljava/util/concurrent/CompletableFuture;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">38</td>
+        <td>java/util/concurrent/CompletableFuture.isDone:()Z</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">39</td>
+        <td>java/util/concurrent/CompletableFuture.supplyAsync:(Ljava/util/function/Supplier;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">40</td>
+        <td>java/util/concurrent/CompletableFuture.thenApplyAsync:(Ljava/util/function/Function;Ljava/util/concurrent/Executor;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">41</td>
+        <td>java/util/concurrent/CompletableFuture.whenComplete:(Ljava/util/function/BiConsumer;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">42</td>
+        <td>java/util/stream/Collectors.groupingBy:(Ljava/util/function/Function;Ljava/util/function/Supplier;Ljava/util/stream/Collector;)Ljava/util/stream/Collector;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">43</td>
+        <td>java/util/stream/Collectors.joining:(Ljava/lang/CharSequence;)Ljava/util/stream/Collector;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">44</td>
+        <td>java/util/stream/Collectors.toSet:()Ljava/util/stream/Collector;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">45</td>
+        <td>javax/script/ScriptEngineManager."&lt;init&gt;":()V</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">46</td>
+        <td>java/io/BufferedWriter.close:()V</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">47</td>
+        <td>java/io/OutputStreamWriter.close:()V</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">48</td>
+        <td>java/lang/Class.getAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">49</td>
+        <td>java/lang/Class.getGenericSuperclass:()Ljava/lang/reflect/Type;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">50</td>
+        <td>java/lang/Exception.printStackTrace:()V</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">51</td>
+        <td>java/lang/Integer.toBinaryString:(I)Ljava/lang/String;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">52</td>
+        <td>java/lang/Integer.toHexString:(I)Ljava/lang/String;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">53</td>
+        <td>java/lang/Integer.toOctalString:(I)Ljava/lang/String;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">54</td>
+        <td>java/lang/Runtime.freeMemory:()J</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">55</td>
+        <td>java/lang/Runtime.maxMemory:()J</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">56</td>
+        <td>java/lang/Runtime.totalMemory:()J</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">57</td>
+        <td>java/net/http/HttpClient.send:(Ljava/net/http/HttpRequest;Ljava/net/http/HttpResponse$BodyHandler;)Ljava/net/http/HttpResponse;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">58</td>
+        <td>java/time/Duration.getSeconds:()J</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">59</td>
+        <td>java/util/Arrays.stream:([I)Ljava/util/stream/IntStream;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">60</td>
+        <td>java/util/EnumMap.put:(Ljava/lang/Enum;Ljava/lang/Object;)Ljava/lang/Object;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">61</td>
+        <td>java/util/Optional.or:(Ljava/util/function/Supplier;)Ljava/util/Optional;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">62</td>
+        <td>java/util/Optional.orElseGet:(Ljava/util/function/Supplier;)Ljava/lang/Object;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">63</td>
+        <td>java/util/concurrent/CompletableFuture.delayedExecutor:(JLjava/util/concurrent/TimeUnit;)Ljava/util/concurrent/Executor;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">64</td>
+        <td>java/util/concurrent/CompletableFuture.exceptionally:(Ljava/util/function/Function;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">65</td>
+        <td>java/util/concurrent/CompletableFuture.isCompletedExceptionally:()Z</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">66</td>
+        <td>java/util/concurrent/CompletableFuture.thenAccept:(Ljava/util/function/Consumer;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">67</td>
+        <td>java/util/concurrent/CompletableFuture.thenCombine:(Ljava/util/concurrent/CompletionStage;Ljava/util/function/BiFunction;)Ljava/util/concurrent/CompletableFuture;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">68</td>
+        <td>java/util/concurrent/Executors.newFixedThreadPool:(I)Ljava/util/concurrent/ExecutorService;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">69</td>
+        <td>java/util/concurrent/TimeUnit.toHours:(J)J</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">70</td>
+        <td>java/util/stream/Collectors.groupingBy:(Ljava/util/function/Function;)Ljava/util/stream/Collector;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">71</td>
+        <td>java/util/stream/Collectors.maxBy:(Ljava/util/Comparator;)Ljava/util/stream/Collector;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">72</td>
+        <td>java/util/stream/Collectors.toCollection:(Ljava/util/function/Supplier;)Ljava/util/stream/Collector;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">73</td>
+        <td>javax/script/ScriptEngineManager.getEngineByName:(Ljava/lang/String;)Ljavax/script/ScriptEngine;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">74</td>
+        <td>java/io/BufferedReader.transferTo:(Ljava/io/Writer;)J</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">75</td>
+        <td>java/io/BufferedWriter.write:(Ljava/lang/String;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">76</td>
+        <td>java/io/OutputStreamWriter."&lt;init&gt;":(Ljava/io/OutputStream;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">77</td>
+        <td>java/lang/Character.toString:(I)Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">78</td>
+        <td>java/lang/Class.getAnnotations:()[Ljava/lang/annotation/Annotation;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">79</td>
+        <td>java/lang/Class.getDeclaredAnnotations:()[Ljava/lang/annotation/Annotation;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">80</td>
+        <td>java/lang/Class.getDeclaredField:(Ljava/lang/String;)Ljava/lang/reflect/Field;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">81</td>
+        <td>java/lang/ClassNotFoundException.printStackTrace:()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">82</td>
+        <td>java/lang/Math.pow:(DD)D</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">83</td>
+        <td>java/lang/Runtime.addShutdownHook:(Ljava/lang/Thread;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">84</td>
+        <td>java/lang/Runtime.availableProcessors:()I</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">85</td>
+        <td>java/lang/Runtime.exec:(Ljava/lang/String;)Ljava/lang/Process;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">86</td>
+        <td>java/lang/Runtime.exec:(Ljava/lang/String;[Ljava/lang/String;Ljava/io/File;)Ljava/lang/Process;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">87</td>
+        <td>java/lang/Runtime.version:()Ljava/lang/Runtime$Version;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">88</td>
+        <td>java/lang/String.chars:()Ljava/util/stream/IntStream;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">89</td>
+        <td>java/lang/String.isBlank:()Z</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">90</td>
+        <td>java/lang/String.lines:()Ljava/util/stream/Stream;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">91</td>
+        <td>java/lang/String.repeat:(I)Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">92</td>
+        <td>java/lang/String.strip:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">93</td>
+        <td>java/lang/String.stripLeading:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">94</td>
+        <td>java/lang/String.stripTrailing:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">95</td>
+        <td>java/lang/Thread."&lt;init&gt;":()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">96</td>
+        <td>java/lang/Thread."&lt;init&gt;":(Ljava/lang/Runnable;Ljava/lang/String;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">97</td>
+        <td>java/lang/Thread.getName:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">98</td>
+        <td>java/lang/Thread.interrupt:()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">99</td>
+        <td>java/lang/reflect/Field.getDeclaredAnnotation:(Ljava/lang/Class;)Ljava/lang/annotation/Annotation;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">100</td>
+        <td>java/lang/reflect/Method.getAnnotatedParameterTypes:()[Ljava/lang/reflect/AnnotatedType;</td>
+        <td align="right">1</td>
+      </tr>
+    </table>
+    <p>NOTE: the table shows the first 100 most popular calls out of 206 calls.</p>
+    <h2 id="other_library_calls">Other library classes used</h2>
+    <table>
+      <col width="60">
+      <col width="660">
+      <col width="60">
+      <tr>
+        <th>#</th>
+        <th>Class name</th>
+        <th>#calls</th>
+      </tr>
+      <tr>
+        <td align="right">1</td>
+        <td>org/junit/Assert</td>
+        <td align="right">37</td>
+      </tr>
+      <tr>
+        <td align="right">2</td>
+        <td>org/javamoney/moneta/function/MonetaryFunctions</td>
+        <td align="right">11</td>
+      </tr>
+      <tr>
+        <td align="right">3</td>
+        <td>org/javamoney/moneta/Money</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">4</td>
+        <td>javax/money/NumberValue</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">5</td>
+        <td>org/javamoney/moneta/function/MonetarySummaryStatistics</td>
+        <td align="right">5</td>
+      </tr>
+      <tr>
+        <td align="right">6</td>
+        <td>javax/money/format/AmountFormatQueryBuilder</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">7</td>
+        <td>javax/money/MonetaryCurrencies</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">8</td>
+        <td>javax/money/format/MonetaryFormats</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">9</td>
+        <td>ch/qos/logback/core/util/FileSize</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">10</td>
+        <td>org/apache/commons/codec/binary/Base64</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">11</td>
+        <td>org/javamoney/moneta/FastMoney</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">12</td>
+        <td>javax/money/MonetaryAmounts</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">13</td>
+        <td>javax/money/MonetaryException</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">14</td>
+        <td>javax/money/MonetaryRoundings</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">15</td>
+        <td>org/javamoney/moneta/function/GroupMonetarySummaryStatistics</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">16</td>
+        <td>org/slf4j/LoggerFactory</td>
+        <td align="right">1</td>
+      </tr>
+    </table>
+    <h2 id="java_app_statistics">Java version</h2>
+    <table>
+      <col width="340">
+      <col width="280">
+      <tr>
+        <th>Location</th>
+        <th>Version</th>
+      </tr>
+      <tr>
+        <td>hepengju-java-new-features</td>
+        <td>11</td>
+      </tr>
+      <tr>
+        <td>System Installed Java Version</td>
+        <td>11.0.4</td>
+      </tr>
+    </table>
+  </main>
+</body>
+</html>
