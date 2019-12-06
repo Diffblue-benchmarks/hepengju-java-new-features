@@ -25,11 +25,6 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<JAVA_HOME>D:\java\jdk-13</JAVA_HOME>
-        <!-- 由于有其他参数需要详细配置, 此处注释掉
-		<maven.compiler.source>13</maven.compiler.source>
-		<maven.compiler.target>13</maven.compiler.target>
-		-->
 	</properties>
 
 	<dependencies>
@@ -100,9 +95,8 @@
 				<configuration>
 					<verbose>true</verbose>
           			<fork>true</fork>
-					<executable>${JAVA_HOME}/bin/javac</executable>
-					<source>13</source>
-					<target>13</target>
+					<source>11</source>
+					<target>11</target>
 					<compilerArgs>
 						<arg>-parameters</arg>
 						<arg>--enable-preview</arg>
